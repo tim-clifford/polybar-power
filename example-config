@@ -1,0 +1,6 @@
+[module/power]
+type = custom/script
+format = <label>
+exec = $HOME/.config/polybar/power/text.sh
+exec-if = [ "$(cat /sys/class/power_supply/BAT1/status)" = "Discharging" ]
+interval = 2
